@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo escribir un prompt que funcione a la primera | Copiloto</title>
+<meta name="description" content="Cuatro piezas, un ejemplo antes y después y una técnica para cuando no sabes qué pedir.">
+<meta name="google-site-verification" content="K4vd_CdY03RDvyj5xCxnXXyH6lYWUaRRch3T_AT6Q-0" />
+<link rel="canonical" href="https://copiloto-guias.pages.dev/guias/escribir-buenos-prompts/">
+<meta property="og:title" content="Cómo escribir un prompt que funcione a la primera | Copiloto">
+<meta property="og:description" content="Cuatro piezas, un ejemplo antes y después y una técnica para cuando no sabes qué pedir.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://copiloto-guias.pages.dev/guias/escribir-buenos-prompts/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo escribir un prompt que funcione a la primera","description":"Cuatro piezas, un ejemplo antes y después y una técnica para cuando no sabes qué pedir.","inLanguage":"es","url":"https://copiloto-guias.pages.dev/guias/escribir-buenos-prompts/","publisher":{"@type":"Organization","name":"Copiloto"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Copiloto, ir al inicio">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#4f3fe0"/><path d="M21.5 11.2A7 7 0 1 0 21.5 20.8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="16" r="2.2" fill="#fff"/></svg>
+      Copiloto
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal"><a href="/" data-route="inicio">Inicio</a><a href="/prompts/" data-route="prompts">Prompts</a><a href="/guias/" data-route="guias" aria-current="page">Guías</a><a href="/aplicaciones/" data-route="aplicaciones">Aplicaciones</a><a href="/novedades/" data-route="novedades">Novedades</a><a href="/revista/" data-route="revista">Revista</a><a href="/sobre/" data-route="sobre">Sobre el sitio</a></nav>
+  </div>
+</header>
+
+<main class="wrap" id="view" tabindex="-1"><article class="article"><a class="back" href="/guias/">Volver a las guías</a><div class="cover" style="background:linear-gradient(115deg,var(--g2),var(--g3))"><svg viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="640" cy="40" r="150" fill="#fff" opacity=".10"/><circle cx="700" cy="210" r="90" fill="#fff" opacity=".12"/><circle cx="120" cy="230" r="70" fill="#fff" opacity=".08"/><circle cx="40" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="106" r="2" fill="#fff" opacity=".35"/><g transform="translate(520 40) scale(5.2)" opacity=".95"><g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H14l-6 5v-5H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/><circle cx="11" cy="15" r="1.2" fill="#fff" stroke="none"/><circle cx="16" cy="15" r="1.2" fill="#fff" stroke="none"/><circle cx="21" cy="15" r="1.2" fill="#fff" stroke="none"/></g></g></svg></div><div class="guide-meta"><span class="chip">Copilot Chat</span><span>6 min de lectura</span></div><h1>Cómo escribir un prompt que funcione a la primera</h1><p class="summary">Cuatro piezas, un ejemplo antes y después y una técnica para cuando no sabes qué pedir.</p>
+<p>La mayoría de respuestas flojas de Copilot no vienen de la herramienta sino del encargo. Un compañero nuevo al que le dices «hazme un resumen» tampoco sabría qué resumir, para quién ni con qué extensión. La formación oficial de Microsoft lo plantea de forma parecida: un buen prompt reúne contexto, objetivo, fuente y expectativas.</p>
+<h2>Las cuatro piezas</h2>
+<p><strong>Contexto.</strong> Quién eres y qué situación hay. «Soy responsable de compras y preparo una reunión con un proveedor que ha subido precios» orienta más que cualquier adjetivo.</p>
+<p><strong>Objetivo.</strong> Qué quieres conseguir con el resultado: decidir, convencer, informar, pedir algo.</p>
+<p><strong>Fuente.</strong> Dónde debe mirar. Puede ser un archivo concreto, un hilo de correo, una reunión o una carpeta. Cuanto más acotada, menos probabilidad de que mezcle información que no toca.</p>
+<p><strong>Expectativas.</strong> Formato, extensión, tono, idioma y qué debe evitar.</p>
+<h2>Un antes y un después</h2>
+<p>Antes: <em>«Resume este correo».</em></p>
+<p>Después: <em>«Soy responsable de compras. Resume este hilo para decidir si aceptamos la subida de precios del proveedor. Dame las cifras, los plazos y lo que cada parte ha propuesto, en cinco puntos y sin más de 120 palabras».</em></p>
+<p>La segunda versión tarda diez segundos más en escribirse y se ahorra dos rondas de correcciones.</p>
+<h2>Corregir en lugar de empezar de cero</h2>
+<p>El primer resultado es un borrador. Lo habitual es afinarlo con instrucciones cortas: «más breve», «cita la fuente de cada cifra», «cambia el tono a más formal», «quita el tercer punto». Conservar la conversación evita repetir el contexto cada vez.</p>
+<h2>Cuando no sabes qué pedir</h2>
+<p>Dale la vuelta: pídele que te entreviste. Un prompt como «antes de redactar, hazme las preguntas que necesites, de una en una» te obliga a aclarar lo que tenías en la cabeza y suele mejorar el resultado más que cualquier plantilla.</p>
+<h2>Un recordatorio práctico</h2>
+<p>Los textos entre corchetes de nuestra <a href="/prompts/">biblioteca de prompts</a> son huecos para rellenar. Si los dejas sin sustituir, Copilot los interpretará literalmente.</p><div class="article-nav"><a href="/guias/chat-o-licencia/"><small>Siguiente</small>Copilot Chat o licencia de Microsoft 365 Copilot: qué cambia</a></div></article></main>
+
+<footer>
+  <div class="wrap">
+    <p>Copiloto es un sitio independiente de guías sobre Microsoft Copilot. No está afiliado a Microsoft ni cuenta con su respaldo. Copilot, Microsoft 365, Outlook, Teams, Excel, Word y PowerPoint son marcas de Microsoft Corporation.</p>
+    <p>Contenido revisado en noviembre de 2026. Las funciones y los precios cambian, así que contrasta lo importante con la documentación oficial.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>

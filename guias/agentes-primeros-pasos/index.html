@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentes de Copilot: cuándo tiene sentido crear uno | Copiloto</title>
+<meta name="description" content="Qué es un agente, qué herramientas existen para crearlo y cómo elegir la primera tarea.">
+<meta name="google-site-verification" content="K4vd_CdY03RDvyj5xCxnXXyH6lYWUaRRch3T_AT6Q-0" />
+<link rel="canonical" href="https://copiloto-guias.pages.dev/guias/agentes-primeros-pasos/">
+<meta property="og:title" content="Agentes de Copilot: cuándo tiene sentido crear uno | Copiloto">
+<meta property="og:description" content="Qué es un agente, qué herramientas existen para crearlo y cómo elegir la primera tarea.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://copiloto-guias.pages.dev/guias/agentes-primeros-pasos/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Agentes de Copilot: cuándo tiene sentido crear uno","description":"Qué es un agente, qué herramientas existen para crearlo y cómo elegir la primera tarea.","inLanguage":"es","url":"https://copiloto-guias.pages.dev/guias/agentes-primeros-pasos/","publisher":{"@type":"Organization","name":"Copiloto"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Copiloto, ir al inicio">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#4f3fe0"/><path d="M21.5 11.2A7 7 0 1 0 21.5 20.8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="16" r="2.2" fill="#fff"/></svg>
+      Copiloto
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal"><a href="/" data-route="inicio">Inicio</a><a href="/prompts/" data-route="prompts">Prompts</a><a href="/guias/" data-route="guias" aria-current="page">Guías</a><a href="/aplicaciones/" data-route="aplicaciones">Aplicaciones</a><a href="/novedades/" data-route="novedades">Novedades</a><a href="/revista/" data-route="revista">Revista</a><a href="/sobre/" data-route="sobre">Sobre el sitio</a></nav>
+  </div>
+</header>
+
+<main class="wrap" id="view" tabindex="-1"><article class="article"><a class="back" href="/guias/">Volver a las guías</a><div class="cover" style="background:linear-gradient(115deg,var(--g2),var(--g3))"><svg viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="640" cy="40" r="150" fill="#fff" opacity=".10"/><circle cx="700" cy="210" r="90" fill="#fff" opacity=".12"/><circle cx="120" cy="230" r="70" fill="#fff" opacity=".08"/><circle cx="40" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="106" r="2" fill="#fff" opacity=".35"/><g transform="translate(520 40) scale(5.2)" opacity=".95"><g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H14l-6 5v-5H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/><circle cx="11" cy="15" r="1.2" fill="#fff" stroke="none"/><circle cx="16" cy="15" r="1.2" fill="#fff" stroke="none"/><circle cx="21" cy="15" r="1.2" fill="#fff" stroke="none"/></g></g></svg></div><div class="guide-meta"><span class="chip">Copilot Chat</span><span>7 min de lectura</span></div><h1>Agentes de Copilot: cuándo tiene sentido crear uno</h1><p class="summary">Qué es un agente, qué herramientas existen para crearlo y cómo elegir la primera tarea.</p>
+<p>Un agente es una versión de Copilot preparada para una tarea concreta: tiene instrucciones fijas, unas fuentes de conocimiento y, a veces, la capacidad de ejecutar acciones. Es la diferencia entre repetir el mismo prompt cada semana y tener un asistente que ya lo conoce.</p>
+<h2>Dos puertas de entrada</h2>
+<p>Microsoft ofrece dentro de Microsoft 365 Copilot un constructor de agentes de experiencia ligera, pensado para usuarios sin perfil técnico. Cuando hace falta más control, hay un camino para llevar ese agente a Copilot Studio con un solo paso, según el anuncio de Microsoft sobre las novedades de Ignite. Copilot Studio es la plataforma para crear, probar y publicar agentes, y permite publicarlos en Microsoft 365 Copilot y en Teams para uso personal, de un grupo piloto o de toda la organización.</p>
+<h2>Cómo elegir la primera tarea</h2>
+<p>Los candidatos buenos cumplen tres condiciones:</p>
+<ol>
+<li>Se repite cada semana o más a menudo.</li>
+<li>Tiene criterios que puedes escribir con claridad.</li>
+<li>Un error es corregible, no costoso.</li>
+</ol>
+<p>Por ejemplo, un agente que responda preguntas frecuentes de un equipo usando un documento de políticas, o uno que prepare un resumen semanal con una estructura fija.</p>
+<h2>Qué escribir en las instrucciones</h2>
+<p>Trata las instrucciones como el manual de un empleado nuevo: qué hace, qué fuentes consulta, qué formato usa, qué no debe hacer y cuándo debe decir «no lo sé». La última parte es la más importante y la que casi todos olvidan.</p>
+<h2>Probar antes de compartir</h2>
+<p>Prepara diez preguntas reales, incluidas dos que el agente no debería poder contestar. Si inventa respuestas a esas dos, ajusta las instrucciones antes de dárselo a nadie.</p>
+<h2>Gobierno y costes</h2>
+<p>Quién puede crear agentes, qué datos pueden leer y cómo se facturan algunas funciones avanzadas lo decide tu organización. Habla con quien administre Microsoft 365 antes de publicar nada para un grupo grande.</p><h2>Siguientes lecturas</h2><p>Para pasar a la práctica: <a href="/guias/crear-un-agente/">crear tu primer agente paso a paso</a>, <a href="/guias/researcher-y-analyst/">Researcher y Analyst</a> y <a href="/guias/cowork-y-skills/">Cowork y skills</a>.</p><div class="article-nav"><a href="/guias/word-y-powerpoint/"><small>Anterior</small>Word y PowerPoint: del borrador al documento final</a><a href="/guias/revisar-y-proteger/"><small>Siguiente</small>Revisar lo que dice Copilot y cuidar lo que le das</a></div></article></main>
+
+<footer>
+  <div class="wrap">
+    <p>Copiloto es un sitio independiente de guías sobre Microsoft Copilot. No está afiliado a Microsoft ni cuenta con su respaldo. Copilot, Microsoft 365, Outlook, Teams, Excel, Word y PowerPoint son marcas de Microsoft Corporation.</p>
+    <p>Contenido revisado en noviembre de 2026. Las funciones y los precios cambian, así que contrasta lo importante con la documentación oficial.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuadernos de Copilot: un espacio por proyecto | Copiloto</title>
+<meta name="description" content="Qué son, cómo montarlos y por qué sus respuestas se limitan a lo que tú metes dentro.">
+<meta name="google-site-verification" content="K4vd_CdY03RDvyj5xCxnXXyH6lYWUaRRch3T_AT6Q-0" />
+<link rel="canonical" href="https://copiloto-guias.pages.dev/guias/cuadernos-de-copilot/">
+<meta property="og:title" content="Cuadernos de Copilot: un espacio por proyecto | Copiloto">
+<meta property="og:description" content="Qué son, cómo montarlos y por qué sus respuestas se limitan a lo que tú metes dentro.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://copiloto-guias.pages.dev/guias/cuadernos-de-copilot/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cuadernos de Copilot: un espacio por proyecto","description":"Qué son, cómo montarlos y por qué sus respuestas se limitan a lo que tú metes dentro.","inLanguage":"es","url":"https://copiloto-guias.pages.dev/guias/cuadernos-de-copilot/","publisher":{"@type":"Organization","name":"Copiloto"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Copiloto, ir al inicio">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#4f3fe0"/><path d="M21.5 11.2A7 7 0 1 0 21.5 20.8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="16" r="2.2" fill="#fff"/></svg>
+      Copiloto
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal"><a href="/" data-route="inicio">Inicio</a><a href="/prompts/" data-route="prompts">Prompts</a><a href="/guias/" data-route="guias" aria-current="page">Guías</a><a href="/aplicaciones/" data-route="aplicaciones">Aplicaciones</a><a href="/novedades/" data-route="novedades">Novedades</a><a href="/revista/" data-route="revista">Revista</a><a href="/sobre/" data-route="sobre">Sobre el sitio</a></nav>
+  </div>
+</header>
+
+<main class="wrap" id="view" tabindex="-1"><article class="article"><a class="back" href="/guias/">Volver a las guías</a><div class="cover" style="background:linear-gradient(115deg,var(--g4),var(--g3))"><svg viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="640" cy="40" r="150" fill="#fff" opacity=".10"/><circle cx="700" cy="210" r="90" fill="#fff" opacity=".12"/><circle cx="120" cy="230" r="70" fill="#fff" opacity=".08"/><circle cx="40" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="106" r="2" fill="#fff" opacity=".35"/><g transform="translate(520 40) scale(5.2)" opacity=".95"><g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l2.7 7.3L24 14l-7.3 2.7L14 24l-2.7-7.3L4 14l7.3-2.7z"/><path d="M25 20l1.1 2.9 2.9 1.1-2.9 1.1L25 28l-1.1-2.9-2.9-1.1 2.9-1.1z"/></g></g></svg></div><div class="guide-meta"><span class="chip">Agentes y espacios</span><span>6 min de lectura</span></div><h1>Cuadernos de Copilot: un espacio por proyecto</h1><p class="summary">Qué son, cómo montarlos y por qué sus respuestas se limitan a lo que tú metes dentro.</p>
+<p>Un cuaderno de Copilot es un espacio de trabajo con inteligencia artificial en el que reúnes todo lo que tiene que ver con un proyecto: conversaciones con Copilot, archivos de Microsoft 365, páginas, notas de reuniones y enlaces. A partir de ahí, Copilot responde sobre ese conjunto y no sobre todo lo que podría encontrar en tu cuenta.</p>
+<h2>La diferencia está en el alcance</h2>
+<p>En el chat normal, Copilot busca por todo lo que tu cuenta puede ver. En un cuaderno, según la documentación de Microsoft, las respuestas se basan únicamente en las referencias que has añadido. Es una ventaja clara cuando necesitas rigor: si la respuesta sale mal, sabes en qué material buscar el origen.</p>
+<h2>Cómo montar uno útil</h2>
+<ol>
+<li>Crea el cuaderno desde el apartado de Cuadernos de la aplicación de Copilot, o desde OneNote en Windows.</li>
+<li>Añade solo las fuentes buenas: la versión vigente del plan, las actas, el presupuesto. Los borradores obsoletos contaminan las respuestas.</li>
+<li>Escribe unas instrucciones personalizadas con el tono, el formato y las reglas de ese proyecto.</li>
+<li>Pregunta, y cuando algo salga bien, guárdalo como página dentro del propio cuaderno.</li>
+</ol>
+<p>Las referencias se mantienen al día cuando los archivos originales cambian, de modo que no hace falta volver a subir cada versión.</p>
+<h2>Qué se le puede pedir</h2>
+<p>Un resumen con fuentes, un cuadro de riesgos, la comparación entre dos versiones de un documento o una lista de contradicciones entre actas y presupuesto. Hay prompts preparados en la <a href="/prompts/">biblioteca</a>, bajo Agentes y espacios.</p>
+<p>Microsoft también ofrece resúmenes en audio de los cuadernos, y la lista de idiomas que admite incluye el español.</p>
+<h2>Disponibilidad y límites</h2>
+<p>Quién puede usar los cuadernos ha ido cambiando: primero con licencia de Microsoft 365 Copilot, después también con Copilot Chat y con algunas suscripciones personales, según los anuncios de Microsoft. La cuenta necesita además almacenamiento en OneDrive o SharePoint. Si no ves la opción de Cuadernos, pregunta a tu administrador antes de pensar que no existe.</p>
+<p>Un cuaderno no sustituye a OneNote: OneNote sirve para tomar notas por secciones y páginas, mientras que el cuaderno de Copilot sirve para consultar un conjunto de fuentes.</p>
+<h2>Sobre compartirlos</h2>
+<p>Los cuadernos se pueden compartir, pero conviene revisar qué permisos tienen los archivos que has añadido. Antes de pasarlo a alguien, comprueba que esa persona también tiene permiso sobre los archivos que contiene.</p><div class="article-nav"><a href="/guias/plan-30-dias/"><small>Anterior</small>Un plan de 30 días para que un equipo adopte Copilot</a><a href="/guias/pages-de-copilot/"><small>Siguiente</small>Copilot Pages: de la respuesta al documento compartido</a></div></article></main>
+
+<footer>
+  <div class="wrap">
+    <p>Copiloto es un sitio independiente de guías sobre Microsoft Copilot. No está afiliado a Microsoft ni cuenta con su respaldo. Copilot, Microsoft 365, Outlook, Teams, Excel, Word y PowerPoint son marcas de Microsoft Corporation.</p>
+    <p>Contenido revisado en noviembre de 2026. Las funciones y los precios cambian, así que contrasta lo importante con la documentación oficial.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/site.js" defer></script>
+</body>
+</html>
