@@ -74,6 +74,10 @@ gtag('config', 'G-9B4WMWT45J');
   <input type="hidden" name="locale" value="es">
 </form>
 
+<div id="descarga-ok" hidden style="max-width:540px; margin-top:16px; padding:16px; background:#e7faf0; border:1px solid #13ce66; border-radius:4px; color:#085229;">
+  <p style="margin:0;"><strong>Casi listo.</strong> Te hemos enviado un correo. Confirma tu dirección desde ese mensaje y la descarga se abrirá automáticamente.</p>
+</div>
+
 <p class="legal-note">Para completar la descarga, confirma tu correo desde el mensaje que te llegará. Los envíos los gestiona Brevo, que actúa bajo nuestras instrucciones. Consulta el <a href="/legal/#privacidad">aviso legal y la política de privacidad</a>.</p>
 </div>
 </section>
@@ -88,6 +92,23 @@ gtag('config', 'G-9B4WMWT45J');
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="/site.js" defer></script>
+<script>
+(function(){
+  var f = document.querySelector('form.suscripcion-form');
+  if (!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type="submit"]');
+    if (btn) btn.disabled = true;
+    fetch(f.action, {method: 'POST', body: new FormData(f), mode: 'no-cors'})
+      .catch(function(){})
+      .then(function(){
+        f.hidden = true;
+        document.getElementById('descarga-ok').hidden = false;
+      });
+  });
+})();
+</script>
 <!-- analitica:body -->
 <style>
 #consent-banner {position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1f1f2e;color:#fff;padding:16px 20px;font:15px/1.5 system-ui,sans-serif;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
