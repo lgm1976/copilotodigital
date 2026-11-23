@@ -18,6 +18,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<!-- analitica:head -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9B4WMWT45J"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});
+(function(){
+  var c = null;
+  try { c = localStorage.getItem('consent-cookies'); } catch(e) {}
+  if (c === 'accepted') gtag('consent', 'update', {analytics_storage: 'granted'});
+})();
+gtag('js', new Date());
+gtag('config', 'G-9B4WMWT45J');
+</script>
+<!-- analitica:head -->
 </head>
 <body>
 <header class="topbar">
@@ -56,5 +77,42 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="/site.js" defer></script>
+<!-- analitica:body -->
+<style>
+#consent-banner {position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1f1f2e;color:#fff;padding:16px 20px;font:15px/1.5 system-ui,sans-serif;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+#consent-banner[hidden] {display:none}
+#consent-banner .cb-wrap {max-width:1100px;margin:0 auto;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+#consent-banner p {margin:0;flex:1 1 420px}
+#consent-banner a {color:#c9c2ff}
+#consent-banner .cb-btns {display:flex;gap:10px}
+#consent-banner button {border:0;border-radius:8px;padding:10px 16px;font:inherit;cursor:pointer}
+#consent-accept {background:#4f3fe0;color:#fff}
+#consent-reject {background:transparent;color:#fff;border:1px solid #fff}
+</style>
+<div id="consent-banner" hidden role="dialog" aria-label="Aviso de cookies">
+  <div class="cb-wrap">
+    <p>Usamos cookies de análisis (Google Analytics) para medir las visitas al sitio. Solo se activan si las aceptas. <a href="/legal/">Más información</a></p>
+    <div class="cb-btns">
+      <button id="consent-reject" type="button">Rechazar</button>
+      <button id="consent-accept" type="button">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var b = document.getElementById('consent-banner');
+  var c = null;
+  try { c = localStorage.getItem('consent-cookies'); } catch(e) {}
+  if (!c) b.hidden = false;
+  function guardar(v){
+    try { localStorage.setItem('consent-cookies', v); } catch(e) {}
+    gtag('consent', 'update', {analytics_storage: v === 'accepted' ? 'granted' : 'denied'});
+    b.hidden = true;
+  }
+  document.getElementById('consent-accept').onclick = function(){ guardar('accepted'); };
+  document.getElementById('consent-reject').onclick = function(){ guardar('rejected'); };
+})();
+</script>
+<!-- analitica:body -->
 </body>
 </html>
