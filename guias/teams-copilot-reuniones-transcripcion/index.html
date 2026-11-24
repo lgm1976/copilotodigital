@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copilot en reuniones de Teams: por qué a veces no responde y cómo se configura | Copiloto Digital</title>
+<meta name="description" content="Los tres modos de uso en una reunión, qué cambia con la transcripción y qué puede decidir cada organizador.">
+<meta name="google-site-verification" content="K4vd_CdY03RDvyj5xCxnXXyH6lYWUaRRch3T_AT6Q-0" />
+<link rel="canonical" href="https://copilotodigital.es/guias/teams-copilot-reuniones-transcripcion/">
+<meta property="og:title" content="Copilot en reuniones de Teams: por qué a veces no responde y cómo se configura | Copiloto Digital">
+<meta property="og:description" content="Los tres modos de uso en una reunión, qué cambia con la transcripción y qué puede decidir cada organizador.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://copilotodigital.es/guias/teams-copilot-reuniones-transcripcion/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Copilot en reuniones de Teams: por qué a veces no responde y cómo se configura","description":"Los tres modos de uso en una reunión, qué cambia con la transcripción y qué puede decidir cada organizador.","inLanguage":"es","url":"https://copilotodigital.es/guias/teams-copilot-reuniones-transcripcion/","publisher":{"@type":"Organization","name":"Copiloto Digital"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!-- analitica:head -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9B4WMWT45J"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});
+(function(){
+  var c = null;
+  try { c = localStorage.getItem('consent-cookies'); } catch(e) {}
+  if (c === 'accepted') gtag('consent', 'update', {analytics_storage: 'granted'});
+})();
+gtag('js', new Date());
+gtag('config', 'G-9B4WMWT45J');
+</script>
+<!-- analitica:head -->
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Copiloto Digital, ir al inicio">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#4f3fe0"/><path d="M21.5 11.2A7 7 0 1 0 21.5 20.8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="16" r="2.2" fill="#fff"/></svg>
+      Copiloto Digital
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal"><a href="/" data-route="inicio">Inicio</a><a href="/prompts/" data-route="prompts">Prompts</a><a href="/guias/" data-route="guias" aria-current="page">Guías</a><a href="/aplicaciones/" data-route="aplicaciones">Aplicaciones</a><a href="/novedades/" data-route="novedades">Novedades</a><a href="/revista/" data-route="revista">Revista</a><a href="/suscribirse/" data-route="suscribirse">Suscríbete</a><a href="/sobre/" data-route="sobre">Sobre el sitio</a></nav>
+  </div>
+</header>
+
+<main class="wrap" id="view" tabindex="-1"><article class="article"><a class="back" href="/guias/">Volver a las guías</a><div class="cover" style="background:linear-gradient(115deg,var(--g3),var(--g2))"><svg viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="640" cy="40" r="150" fill="#fff" opacity=".10"/><circle cx="700" cy="210" r="90" fill="#fff" opacity=".12"/><circle cx="120" cy="230" r="70" fill="#fff" opacity=".08"/><circle cx="40" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="40" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="62" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="84" r="2" fill="#fff" opacity=".35"/><circle cx="40" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="62" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="84" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="106" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="128" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="150" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="172" cy="106" r="2" fill="#fff" opacity=".35"/><circle cx="194" cy="106" r="2" fill="#fff" opacity=".35"/><g transform="translate(520 40) scale(5.2)" opacity=".95"><g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="3.6"/><path d="M5 25c0-4 3-6.6 7-6.6s7 2.6 7 6.6"/><circle cx="23" cy="12.5" r="3"/><path d="M21.5 18.6c3.9-.6 6.7 1.5 6.7 5.2"/></g></g></svg></div><div class="guide-meta"><span class="chip">Teams</span><span>6 min de lectura</span></div><h1>Copilot en reuniones de Teams: por qué a veces no responde y cómo se configura</h1><p class="summary">Los tres modos de uso en una reunión, qué cambia con la transcripción y qué puede decidir cada organizador.</p>
+<p>Hay reuniones de Teams en las que Copilot responde a todo y otras en las que el botón ni aparece. Casi nunca es un fallo. Depende de tres capas que se combinan: la política que ha fijado el administrador, lo que elige el organizador en las opciones de la reunión y si hay una transcripción en marcha. Conocerlas ahorra tiempo cuando alguien pregunta por qué a ti no te funciona.</p>
+<p>Esta guía sirve a quien organiza reuniones y a quien asiste con licencia de Microsoft 365 Copilot. También a quien administra un tenant pequeño y quiere entender qué valor conviene dejar por defecto. Los datos proceden de la página de Microsoft Learn sobre la gestión de Copilot en reuniones y eventos de Teams, actualizada en octubre de 2026. Los nombres exactos de las opciones pueden aparecer traducidos de otra manera en tu Teams.</p>
+<h2>Los tres valores posibles de una reunión</h2>
+<p>Cada reunión tiene uno de estos tres estados para Copilot:</p>
+<ul>
+<li><strong>Solo durante la reunión.</strong> Copilot trabaja con datos de voz a texto temporales, que no se guardan cuando la reunión termina. Si una persona con licencia lo activa, funciona para todos los asistentes con licencia.</li>
+<li><strong>Durante y después de la reunión.</strong> Una vez iniciada la transcripción, quienes tienen licencia pueden consultar a Copilot mientras dura la reunión y también al acabar.</li>
+<li><strong>Desactivado.</strong> Nadie puede usar Copilot en esa reunión. Al apagarlo, se desactivan también la grabación y la transcripción.</li>
+</ul>
+<p>Cada asistente con licencia hace sus preguntas en privado: lo que preguntas tú no lo ve el resto.</p>
+<h2>Cómo se combina con la transcripción</h2>
+<p>La política de transcripción y la opción del organizador se cruzan. Según la tabla de Microsoft, con la transcripción permitida y la opción «solo durante», Copilot funciona durante la reunión y, para usarlo después, alguien debe iniciar una transcripción. Con la transcripción no permitida y la opción «solo durante», sigue funcionando en directo con datos temporales, y si otra persona con permiso inicia la transcripción, Copilot queda disponible también después para la parte transcrita. Con la opción «durante y después» y sin transcripción, quienes tienen licencia no pueden usarlo mientras nadie con permiso la inicie.</p>
+<h2>Lo que decide el administrador</h2>
+<p>La política de reunión tiene un ajuste de Copilot en el apartado de grabación y transcripción, con cuatro valores:</p>
+<ol>
+<li><strong>Activado.</strong> Por defecto, solo durante la reunión. El organizador puede cambiarlo.</li>
+<li><strong>Activado con transcripción guardada obligatoria.</strong> Por defecto, durante y después. Es el valor que la página indica como predeterminado y el organizador no puede modificarlo.</li>
+<li><strong>Activado con transcripción guardada por defecto.</strong> Por defecto, durante y después, pero el organizador puede cambiarlo.</li>
+<li><strong>Desactivado.</strong> Por defecto, sin Copilot. El organizador puede activarlo en su reunión.</li>
+</ol>
+<p>Las políticas se asignan a usuarios o grupos, así que dos compañeros del mismo equipo pueden tener comportamientos distintos.</p>
+<h2>Qué hacer si no ves Copilot</h2>
+<ol>
+<li>Confirma que tu cuenta tiene licencia de Microsoft 365 Copilot: la documentación describe esta función para usuarios con licencia.</li>
+<li>Mira las opciones de la reunión y comprueba qué modo eligió el organizador.</li>
+<li>Comprueba si hay una transcripción iniciada, sobre todo si necesitas consultar después de la reunión.</li>
+<li>Descarta que la reunión tenga cifrado de extremo a extremo, porque en ese caso Copilot no está disponible.</li>
+<li>Si todo encaja y sigue sin aparecer, pide al administrador que revise tu política de reunión.</li>
+</ol>
+<h2>Un prompt para usar durante la reunión</h2>
+<p>Cuando la reunión lleva media hora y la agenda se ha desordenado, esta consulta ayuda a cerrar bien:</p>
+<p><em>«Con lo hablado hasta ahora, dime qué puntos de la agenda no hemos tratado, qué acuerdos se han mencionado sin fecha y qué dos preguntas deberíamos plantear antes de terminar. Si algo no consta en la conversación, dilo».</em></p>
+<p>Lo útil es la última frase: obliga a distinguir lo que se dijo de lo que Copilot supone.</p>
+<h2>Límites y cuándo no conviene usarlo</h2>
+<ul>
+<li>No funciona en reuniones con cifrado de extremo a extremo ni, según la página, en GCC High.</li>
+<li>En eventos con audiencia grande, solo el organizador, los coorganizadores y los presentadores pueden usarlo.</li>
+<li>Apagar la transcripción no borra todo rastro: según las políticas de retención de Microsoft Purview de tu organización, las preguntas y respuestas de Copilot pueden conservarse con fines de cumplimiento.</li>
+<li>La documentación consultada no aclara si los invitados externos pueden usarlo ni qué idiomas admite. No lo des por hecho y pruébalo antes de una reunión importante.</li>
+<li>En reuniones con información muy delicada, acordad antes si se activa. Si preferís que no se use, la opción es desactivarlo en esa reunión.</li>
+</ul>
+<h2>Comprobaciones antes de empezar</h2>
+<ul>
+<li>El modo elegido para la reunión es el que necesitas.</li>
+<li>Alguien con permiso iniciará la transcripción si vas a consultar después.</li>
+<li>Quienes asisten han sido avisados de que Copilot estará activo.</li>
+<li>Lo que Copilot atribuya a una persona se contrasta con la grabación, como se explica en la guía de <a href="/guias/teams-reuniones-con-memoria/">reuniones que dejan algo útil</a> y en la de <a href="/guias/revisar-y-proteger/">revisión y protección</a>.</li>
+</ul><div class="article-nav"><a href="/guias/kits-de-marca/"><small>Anterior</small>Kits de marca: Copilot con la imagen de tu organización</a><a href="/guias/copilot-permisos-y-etiquetas/"><small>Siguiente</small>Qué puede ver Copilot: permisos, etiquetas de confidencialidad y lo que se guarda</a></div></article></main>
+
+<footer>
+  <div class="wrap">
+    <p>Copiloto es un sitio independiente de guías sobre Microsoft Copilot. No está afiliado a Microsoft ni cuenta con su respaldo. Copilot, Microsoft 365, Outlook, Teams, Excel, Word y PowerPoint son marcas de Microsoft Corporation.</p>
+    <p>Contenido revisado en noviembre de 2026. Las funciones y los precios cambian, así que contrasta lo importante con la documentación oficial.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/site.js" defer></script>
+<!-- analitica:body -->
+<style>
+#consent-banner {position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#1f1f2e;color:#fff;padding:16px 20px;font:15px/1.5 system-ui,sans-serif;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+#consent-banner[hidden] {display:none}
+#consent-banner .cb-wrap {max-width:1100px;margin:0 auto;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+#consent-banner p {margin:0;flex:1 1 420px}
+#consent-banner a {color:#c9c2ff}
+#consent-banner .cb-btns {display:flex;gap:10px}
+#consent-banner button {border:0;border-radius:8px;padding:10px 16px;font:inherit;cursor:pointer}
+#consent-accept {background:#4f3fe0;color:#fff}
+#consent-reject {background:transparent;color:#fff;border:1px solid #fff}
+</style>
+<div id="consent-banner" hidden role="dialog" aria-label="Aviso de cookies">
+  <div class="cb-wrap">
+    <p>Usamos cookies de análisis (Google Analytics) para medir las visitas al sitio. Solo se activan si las aceptas. <a href="/legal/">Más información</a></p>
+    <div class="cb-btns">
+      <button id="consent-reject" type="button">Rechazar</button>
+      <button id="consent-accept" type="button">Aceptar</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var b = document.getElementById('consent-banner');
+  var c = null;
+  try { c = localStorage.getItem('consent-cookies'); } catch(e) {}
+  if (!c) b.hidden = false;
+  function guardar(v){
+    try { localStorage.setItem('consent-cookies', v); } catch(e) {}
+    gtag('consent', 'update', {analytics_storage: v === 'accepted' ? 'granted' : 'denied'});
+    b.hidden = true;
+  }
+  document.getElementById('consent-accept').onclick = function(){ guardar('accepted'); };
+  document.getElementById('consent-reject').onclick = function(){ guardar('rejected'); };
+})();
+</script>
+<!-- analitica:body -->
+</body>
+</html>
