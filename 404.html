@@ -47,8 +47,17 @@ gtag('config', 'G-9B4WMWT45J');
       <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#4f3fe0"/><path d="M21.5 11.2A7 7 0 1 0 21.5 20.8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="16" r="2.2" fill="#fff"/></svg>
       Copiloto Digital
     </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir el menú"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
     <nav class="nav" id="nav" aria-label="Principal"><a href="/" data-route="inicio">Inicio</a><a href="/prompts/" data-route="prompts">Prompts</a><a href="/guias/" data-route="guias">Guías</a><a href="/aplicaciones/" data-route="aplicaciones">Aplicaciones</a><a href="/novedades/" data-route="novedades">Novedades</a><a href="/revista/" data-route="revista">Revista</a><a href="/suscribirse/" data-route="suscribirse">Suscríbete</a><a href="/sobre/" data-route="sobre">Sobre el sitio</a></nav>
   </div>
+  <script>
+  (function(){var d=document.documentElement;d.classList.add("js");var h=document.currentScript.parentNode,b=h.querySelector(".nav-toggle");if(!b)return;
+  function set(o){h.classList.toggle("nav-open",o);b.setAttribute("aria-expanded",String(o));b.setAttribute("aria-label",o?"Cerrar el menú":"Abrir el menú")}
+  b.addEventListener("click",function(){set(!h.classList.contains("nav-open"))});
+  h.addEventListener("click",function(e){if(e.target.closest(".nav a"))set(false)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("nav-open")){set(false);b.focus()}});
+  })();
+  </script>
 </header>
 
 <main class="wrap" id="view" tabindex="-1"><div class="empty">Esa página no existe. <a href="/">Volver al inicio</a>.</div></main>

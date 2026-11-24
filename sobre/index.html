@@ -47,8 +47,17 @@ gtag('config', 'G-9B4WMWT45J');
       <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#4f3fe0"/><path d="M21.5 11.2A7 7 0 1 0 21.5 20.8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="16" r="2.2" fill="#fff"/></svg>
       Copiloto Digital
     </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir el menú"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
     <nav class="nav" id="nav" aria-label="Principal"><a href="/" data-route="inicio">Inicio</a><a href="/prompts/" data-route="prompts">Prompts</a><a href="/guias/" data-route="guias">Guías</a><a href="/aplicaciones/" data-route="aplicaciones">Aplicaciones</a><a href="/novedades/" data-route="novedades">Novedades</a><a href="/revista/" data-route="revista">Revista</a><a href="/suscribirse/" data-route="suscribirse">Suscríbete</a><a href="/sobre/" data-route="sobre" aria-current="page">Sobre el sitio</a></nav>
   </div>
+  <script>
+  (function(){var d=document.documentElement;d.classList.add("js");var h=document.currentScript.parentNode,b=h.querySelector(".nav-toggle");if(!b)return;
+  function set(o){h.classList.toggle("nav-open",o);b.setAttribute("aria-expanded",String(o));b.setAttribute("aria-label",o?"Cerrar el menú":"Abrir el menú")}
+  b.addEventListener("click",function(){set(!h.classList.contains("nav-open"))});
+  h.addEventListener("click",function(e){if(e.target.closest(".nav a"))set(false)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("nav-open")){set(false);b.focus()}});
+  })();
+  </script>
 </header>
 
 <main class="wrap" id="view" tabindex="-1"><div class="prose"><h1>Sobre Copiloto</h1><p>Copiloto reúne prompts y guías para usar Microsoft Copilot en el trabajo diario, escritos directamente en español. La idea es sencilla: cuanto mejor sabes pedir, menos tiempo pierdes corrigiendo.</p><h2>Cómo está hecho el contenido</h2><p>Los prompts, las guías y el diseño de este sitio son originales. El contenido se ha redactado con ayuda de Claude, un asistente de inteligencia artificial de Anthropic, y se ha contrastado con la documentación pública de Microsoft sobre prompts, planes de Copilot y agentes.</p><div class="notice"><strong>Un aviso importante.</strong> Copilot cambia con frecuencia: nombres, funciones y precios se actualizan cada pocas semanas. Antes de decidir una compra o una configuración, consulta la documentación oficial de Microsoft y a tu administrador de Microsoft 365.</div><h2>Independencia</h2><p>Este sitio no está afiliado a Microsoft ni recibe su respaldo. Los nombres de productos pertenecen a sus propietarios y se usan solo para identificar a qué herramienta se refiere cada texto.</p><h2>Cómo usar los prompts</h2><p>Copia el texto, sustituye lo que va entre corchetes y revisa el resultado antes de usarlo. Si trabajas con información de clientes o datos personales, sigue las normas de tu organización sobre qué se puede pegar en una herramienta de IA.</p></div></main>

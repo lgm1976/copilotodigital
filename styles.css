@@ -255,3 +255,22 @@ a.app-card{text-decoration:none}
   .hero-foto { justify-self: center; max-width: 300px; }
   .rev-grid { grid-template-columns: 1fr; }
 }
+
+/* Menú móvil (hamburguesa). Sin JavaScript, el menú se muestra completo como antes. */
+.nav-toggle { display: none; }
+@media (max-width: 760px) {
+  .topbar .wrap { flex-wrap: wrap; min-height: 56px; padding-block: 6px; }
+  .brand { font-size: 1.15rem; }
+  .nav-toggle { display: inline-grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); cursor: pointer; padding: 0; }
+  .nav-toggle-bars, .nav-toggle-bars::before, .nav-toggle-bars::after { display: block; width: 20px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .2s, background .2s; }
+  .nav-toggle-bars { position: relative; }
+  .nav-toggle-bars::before, .nav-toggle-bars::after { content: ""; position: absolute; left: 0; }
+  .nav-toggle-bars::before { top: -6px; }
+  .nav-toggle-bars::after { top: 6px; }
+  .nav-open .nav-toggle-bars { background: transparent; }
+  .nav-open .nav-toggle-bars::before { transform: translateY(6px) rotate(45deg); }
+  .nav-open .nav-toggle-bars::after { transform: translateY(-6px) rotate(-45deg); }
+  .js .nav { display: none; flex: 1 0 100%; flex-direction: column; gap: 2px; padding: 6px 0 10px; max-height: calc(100vh - 90px); overflow-y: auto; }
+  .js .nav-open .nav { display: flex; }
+  .js .nav a { padding: 12px 14px; border-radius: 10px; font-size: 1.02rem; }
+}
