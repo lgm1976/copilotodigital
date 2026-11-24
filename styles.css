@@ -261,7 +261,7 @@ a.app-card{text-decoration:none}
 @media (max-width: 760px) {
   .topbar .wrap { flex-wrap: wrap; min-height: 56px; padding-block: 6px; }
   .brand { font-size: 1.15rem; }
-  .nav-toggle { display: inline-grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); cursor: pointer; padding: 0; }
+  .nav-toggle { display: inline-grid !important; place-items: center; width: 44px; height: 44px; margin-left: auto; border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); cursor: pointer; padding: 0; }
   .nav-toggle-bars, .nav-toggle-bars::before, .nav-toggle-bars::after { display: block; width: 20px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .2s, background .2s; }
   .nav-toggle-bars { position: relative; }
   .nav-toggle-bars::before, .nav-toggle-bars::after { content: ""; position: absolute; left: 0; }
