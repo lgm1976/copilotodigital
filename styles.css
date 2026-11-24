@@ -241,3 +241,17 @@ footer p { margin: 0; max-width: 62ch; }
 /* estático */
 [hidden]{display:none!important}
 a.app-card{text-decoration:none}
+
+/* Portada con retrato y sección de la revista (reglas originales, antes en un <style> de index.html) */
+.hero-nuevo { align-items: end; padding-block: 48px 0; background: var(--surface-2); box-shadow: 0 0 0 100vmax var(--surface-2); clip-path: inset(0 -100vmax); }
+.hero-texto { align-self: center; }
+.hero-foto { display: block; width: 100%; max-width: 420px; height: auto; justify-self: end; margin: 0; }
+.rev-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: center; }
+.rev-grid img { width: 100%; max-width: 280px; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
+.rev-grid ul { padding-left: 1.2em; margin: 0 0 1.2em; }
+.rev-grid li { margin-bottom: .35em; }
+@media (max-width: 860px) {
+  .hero-nuevo { grid-template-columns: 1fr; }
+  .hero-foto { justify-self: center; max-width: 300px; }
+  .rev-grid { grid-template-columns: 1fr; }
+}
